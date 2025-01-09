@@ -1,0 +1,21 @@
+doctype html
+html.h-full.bg-gray-100 data-theme="white-label-2"
+  head
+    title
+      = content_for(:title) || "Tailwind White Labels"
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    meta[name="apple-mobile-web-app-capable" content="yes"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = yield :head
+    link[rel="manifest" href="/manifest.json"]
+    link[rel="icon" href="/icon.png" type="image/png"]
+    link[rel="icon" href="/icon.svg" type="image/svg+xml"]
+    link[rel="apple-touch-icon" href="/icon.png"]
+    link[rel="preconnect" href="https://fonts.googleapis.com"]
+    link[rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""]
+    link[href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA&family=Roboto&display=swap" rel="stylesheet"]
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
+  body.h-full
+    = yield

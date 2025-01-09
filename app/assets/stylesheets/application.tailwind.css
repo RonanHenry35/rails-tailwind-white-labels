@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Helvetica, serif;
+    font-weight: 400;
+    font-style: normal;
+
+    --font-title-1: "Arial", serif;
+    --color-primary-600: #4f46e5;
+    --color-primary-700: #4338ca;
+  }
+
+  html[data-theme="white-label-1"] {
+    font-family: "Playwrite AU SA", serif;
+
+    --font-title-1: "Roboto", serif;
+    --color-primary-600: #0d9488;
+    --color-primary-700: #0f766e;
+  }
+
+  html[data-theme="white-label-2"] {
+    font-family: "Roboto", serif;
+
+    --font-title-1: "Playwrite AU SA", serif;
+    --color-primary-600: #db2777;
+    --color-primary-700: #be185d;
+  }
+}
